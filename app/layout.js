@@ -3,6 +3,14 @@ import "./globals.css";
 import { Container } from "@mui/material";
 import Contacts from "./components/headers/Contacts";
 import NavBar from "./components/headers/NavBar";
+import { Cairo } from "next/font/google";
+
+
+const cairo = Cairo({
+	subsets: ['arabic'],
+	display: 'swap',
+	variable: "--font-cairo"
+})
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -22,12 +30,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" dir="rtl">
+    <html lang="en" dir="rtl" className={cairo.className}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen bg-teal-200`}
+        className={`${geistSans.variable} ${geistMono.variable} ${cairo.variable}  antialiased h-screen`}
       >
-				<Contacts />
-				<NavBar/>
+        <Contacts />
+        <NavBar />
         {children}
       </body>
     </html>

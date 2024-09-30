@@ -2,12 +2,12 @@ import Image from 'next/image';
 
 const HomeImage = () => {
 	return (
-		<div>
+		<div className='h-[300px]'>
 			<Image
-				src="/my-image.jpg"
+				src="/background.jpg"
 				alt="A beautiful landscape"
 				width={800}
-				height={500}
+				height={400}
 				layout="responsive"
 			/>
 		</div>
