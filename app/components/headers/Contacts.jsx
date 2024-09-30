@@ -17,11 +17,11 @@ const Contacts = () => {
       <Container className="flex justify-between items-center flex-col md:flex-row">
         <div className="flex justify-center gap-4 my-2">
           <div className="flex align-middle hover:text-teal-500 hover:cursor-pointer">
-            <span className="">{"email@domain-name.education"}</span>
+            <span className="">{"email@domain.education"}</span>
             <AlternateEmailIcon />
           </div>
           <div className="hover:text-teal-500 hover:cursor-pointer">
-            {"05123456789"}
+            <span>0512345678</span>
             <PhoneIphoneIcon />
           </div>
         </div>
